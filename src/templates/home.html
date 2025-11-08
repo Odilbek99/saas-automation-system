@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Page Visits Count: {{ page_visits_count }}</h2>
+<h2>Page Visits Info:</h2>
+<ul>
+{% for visit in page_visits %}
+    <li>{{ visit.timestamp }} - {{ visit.path }}</li>
+{% endfor %}
+</ul>
+{% endblock content %}
